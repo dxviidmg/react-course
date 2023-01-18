@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { Button } from "./Button";
 //import { Greetings, Greetings2, UserCard } from "./Greetings";
@@ -60,6 +60,34 @@ function Counter() {
     </>
   );
 }
+
+function Counter2() {
+  const [mensaje, setMensaje] = useState('');
+  const [counter, setCounter] = useState(0);
+
+  useEffect(function(){
+    console.log('render')
+  }, [counter]
+  )
+
+  return (
+    <>
+      <h1>Counter {counter}</h1>
+      <button
+        onClick={() => {
+          setCounter(counter+1);
+        }}
+      >
+        Sumar
+      </button>
+      <input onChange={e => setMensaje(e.target.value)}/><button onClick={() => {
+        alert('el mensaje es: ' + mensaje)
+      }}>save</button>
+    </>
+  );
+}
+
+
 root.render(
   <>
     {/*     <UserCard
@@ -108,7 +136,7 @@ root.render(
     <img src={user.image}></img>
   </div>
 })} */}
+    <Counter2 />
 
-    <Counter />
   </>
 );
