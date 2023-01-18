@@ -50,6 +50,13 @@ function Counter() {
       >
         Restar
       </button>
+      <button
+        onClick={() => {
+          setCounter(0);
+        }}
+      >
+        Reiniciar
+      </button>
     </>
   );
 }
