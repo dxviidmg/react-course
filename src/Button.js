@@ -32,4 +32,37 @@ export function AlertButton({message, children}){
     )
 }
 
-export function Play
+function Button3({onClick, children}){
+    return (
+        <button onClick={onClick}>
+            {children}
+        </button>
+    )
+}
+function PlayButton({movieName}) {
+    function handlePlayClick({movieName}) {
+        alert('Playing', {movieName})
+    }
+    return (
+        <Button3 onClick={handlePlayClick}>
+            Play "{movieName}"
+        </Button3>
+    )
+}
+
+function UploadButton(){
+    return (
+        <Button3 onClick={()=> alert('uploading')}>
+            Upload morro
+        </Button3>
+    )
+}
+
+export function Toolbar(){
+    return (
+        <div>
+            <PlayButton movieName="valv"></PlayButton>
+            <UploadButton></UploadButton>
+        </div>
+    )
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import { Button, Button2, AlertButton} from "./Button";
+import { Button, Button2, AlertButton, Toolbar} from "./Button";
 //import { Greetings, Greetings2, UserCard } from "./Greetings";
 //import Product, { Navbar } from "./Product";
 //import { TaskCard } from "./Task";
@@ -146,6 +146,6 @@ root.render(
       <AlertButton message="playing">Play</AlertButton>
       <AlertButton message="uploading">Upload</AlertButton>
     </div>
-
+    <Toolbar></Toolbar>
   </>
 );
