@@ -8,6 +8,7 @@ import { Button, Button2, AlertButton, Toolbar} from "./Button";
 //import { Saludar } from "./Saludar";
 import { Posts } from "./Posts";
 import { useState } from "react";
+import SignUp from "./Form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -147,5 +148,6 @@ root.render(
       <AlertButton message="uploading">Upload</AlertButton>
     </div>
     <Toolbar></Toolbar>
+    <SignUp></SignUp>
   </>
 );
