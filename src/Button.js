@@ -34,7 +34,10 @@ export function AlertButton({message, children}){
 
 function Button3({onClick, children}){
     return (
-        <button onClick={onClick}>
+        <button onClick={e=>{
+            e.stopPropagation();
+            onClick();
+        }}>
             {children}
         </button>
     )
@@ -44,7 +47,7 @@ function PlayButton({movieName}) {
         alert('Playing', {movieName})
     }
     return (
-        <Button3 onClick={handlePlayClick}>
+        <Button3 onClick={()=> alert('werere')}>
             Play "{movieName}"
         </Button3>
     )
@@ -60,7 +63,7 @@ function UploadButton(){
 
 export function Toolbar(){
     return (
-        <div>
+        <div onClick={() => {alert('clickeaste el toolbar')}}>
             <PlayButton movieName="valv"></PlayButton>
             <UploadButton></UploadButton>
         </div>
