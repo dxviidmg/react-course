@@ -9,7 +9,7 @@ import { Button, Button2, AlertButton, Toolbar} from "./Button";
 import { Posts } from "./Posts";
 import { useState } from "react";
 import SignUp from "./Form";
-
+import Gallery from './Gallery'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const handleChange = (e) => {
@@ -149,5 +149,7 @@ root.render(
     </div>
     <Toolbar></Toolbar>
     <SignUp></SignUp>
+    <Gallery></Gallery>
   </>
+
 );
