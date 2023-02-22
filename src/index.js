@@ -149,7 +149,11 @@ root.render(
     </div>
     <Toolbar></Toolbar>
     <SignUp></SignUp>
+    <div>
     <Gallery></Gallery>
+    <Gallery></Gallery>
+    </div>
+    
   </>
 
 );
