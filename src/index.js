@@ -10,7 +10,10 @@ import { Posts } from "./Posts";
 import { useState } from "react";
 import SignUp from "./Form";
 import Gallery from './Gallery'
+import {FormState} from './FormState'
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 
 const handleChange = (e) => {
   console.log(e.target.value);
@@ -76,7 +79,12 @@ function Counter2() {
       <h1>Counter {counter}</h1>
       <button
         onClick={() => {
-          setCounter(counter+1);
+//          setCounter(counter+1);
+          setCounter((counter) => (counter+1))
+          setCounter((counter) => (counter+1))
+          setTimeout(() => {
+            alert(counter)
+          }, 3000);
         }}
       >
         Sumar
@@ -152,6 +160,9 @@ root.render(
     <div>
     <Gallery></Gallery>
     <Gallery></Gallery>
+    </div>
+    <div>
+      <FormState></FormState>
     </div>
     
   </>
